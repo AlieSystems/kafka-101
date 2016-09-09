@@ -1,6 +1,6 @@
-# Sample Programs for Kafka 0.9 API
+# Kafka-101 
 
-Un exemple de producteur consommateur sur Kafka avec schema-registry sur la plateforme confluent.io 3.0
+Un exemple de producteur/consommateur Kafka avec schema-registry sur la plateforme confluent.io 3.0
 
 ### Étape 0: Installer Kafka
 
@@ -19,10 +19,10 @@ $ cd confluent-3.0.1
 # Lancer Zookeeper
 $ bin/zookeeper-server-start ./etc/kafka/zookeeper.properties
 
-# Lancer Kafka 
+# Lancer Kafka  (dans une nouvelle console)
 $ bin/kafka-server-start ./etc/kafka/server.properties
 
-# Lancer Schema Registry
+# Lancer Schema Registry (dans une nouvelle console)
 $ bin/schema-registry-start ./etc/schema-registry/schema-registry.properties
 ```
 
@@ -35,9 +35,11 @@ $ bin/kafka-topics  --create --zookeeper localhost:2181 --replication-factor 1 -
 $ bin/kafka-topics --list --zookeeper localhost:2181
 ```
 
-### Step 4: Compilation & Run
+### Étape 4: Compilation & Run
 
 ```shell
+$ git clone https://github.com/oraclewalid/kafka-101.git
+
 $ cd kafka-101
 
 $ mvn clean package
@@ -47,6 +49,6 @@ $ mvn exec:java -Dexec.mainClass="com.fabulouslab.kafka.Consumer"
 ```
 
 ```shell
-# Lancer Producer
+# Lancer Producer (dans une nouvelle console)
 $ mvn exec:java -Dexec.mainClass="com.fabulouslab.kafka.Producer"
 ```

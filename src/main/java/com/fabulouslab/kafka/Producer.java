@@ -37,8 +37,8 @@ public class Producer {
         Schema schema = parser.parse(schemaString);
 
         try {
-            int customers = 10;
-            for (int userId = 0; userId < customers; userId++) {
+            int users = 10;
+            for (int userId = 0; userId < users; userId++) {
                 String name = "user" + userId;
                 String email = name + "@fabulouslab.com";
                 GenericRecord user = new GenericData.Record(schema);
