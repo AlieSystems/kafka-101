@@ -35,7 +35,7 @@ $ bin/kafka-topics  --create --zookeeper localhost:2181 --replication-factor 1 -
 $ bin/kafka-topics --list --zookeeper localhost:2181
 ```
 
-### Étape 4: Compilation & Run
+### Étape 3: Compilation & Run
 
 ```shell
 $ git clone https://github.com/oraclewalid/kafka-101.git
